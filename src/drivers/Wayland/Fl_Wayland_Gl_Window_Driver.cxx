@@ -100,7 +100,7 @@ void Fl_Wayland_Gl_Window_Driver::init() {
   if (eglInitialize(egl_display, &major, &minor) != EGL_TRUE) {
     Fl::fatal("Can't initialise egl display\n");
   }
-  //printf("EGL major: %d, minor %d\n", major, minor);
+  printf("EGL major: %d, minor %d\n", major, minor);
   //eglGetConfigs(egl_display, NULL, 0, &configs_count);
   //printf("EGL has %d configs\n", configs_count);
   eglBindAPI(EGL_OPENGL_API);
