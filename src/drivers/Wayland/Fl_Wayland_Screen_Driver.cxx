@@ -219,7 +219,7 @@ static void pointer_enter(void *data, struct wl_pointer *wl_pointer, uint32_t se
   seat->pointer_enter_serial = serial;
   set_event_xy(win);
   Fl::handle(FL_ENTER, win);
-  //fprintf(stderr, "pointer_enter window=%p\n", win);
+  fprintf(stderr, "pointer_enter window=%p\n", win);
   seat->pointer_focus = surface;
 }
 
@@ -263,7 +263,7 @@ static void pointer_motion(void *data, struct wl_pointer *wl_pointer,
 }
 
 
-//#include <FL/names.h>
+#include <FL/names.h>
 static void pointer_button(void *data,
          struct wl_pointer *wl_pointer,
          uint32_t serial,
@@ -309,7 +309,7 @@ static void pointer_button(void *data,
   } else if (state == WL_POINTER_BUTTON_STATE_RELEASED) {
     event = FL_RELEASE;
   }
-  // fprintf(stderr, "%s %s\n", fl_eventnames[event], win->label() ? win->label():"[]");
+  fprintf(stderr, "%s %s\n", fl_eventnames[event], win->label() ? win->label():"[]");
   Fl::handle(event, win);
 }
 
