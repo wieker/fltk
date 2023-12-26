@@ -103,7 +103,7 @@ void Fl_Wayland_Graphics_Driver::create_shm_buffer(Fl_Wayland_Graphics_Driver::w
   buffer->shm_pool = current_pool;
   buffer->data = (void*)(pool_data->pool_memory + chunk_offset);
 //fprintf(stderr, "last=%p chunk_offset=%d ", pool_data->buffers.next, chunk_offset);
-//fprintf(stderr, "create_shm_buffer: %dx%d = %d\n", width, height, size);
+fprintf(stderr, "create_shm_buffer: %dx%d = %d\n", width, height, pool_size);
 }
 
 
